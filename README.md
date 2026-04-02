@@ -31,7 +31,7 @@ The knowledge refinement step (decompose-then-recompose) splits documents into 1
 **Query 2 — CORRECT** (answered from corpus)
 ![Query 2](assets/Screenshot%202026-04-02%20122519.png)
 
-**Query 3 — INCORRECT** (corpus has nothing recent → web search fires)
+**Query 3 — AMBIGUOUS** (corpus has nothing recent → web search fires)
 ![Query 3](assets/Screenshot%202026-04-02%20122528.png)
 
 **Query 4 — INCORRECT** (no local knowledge → web search fires)
@@ -61,7 +61,7 @@ GENERATOR_MODEL=claude-sonnet-4-6
 python example.py
 ```
 
-This runs 4 queries against a small in-memory corpus. The first two should resolve from the corpus (`CORRECT`), the last two will trigger web search (`INCORRECT` or 'AMBIGOUS').
+This runs 4 queries against a small in-memory corpus. The first two should resolve from the corpus (`CORRECT`), the last two will trigger web search (`INCORRECT` or `AMBIGUOUS`).
 
 **Single query:**
 ```bash
