@@ -23,24 +23,7 @@ The knowledge refinement step (decompose-then-recompose) splits documents into 1
 
 ---
 
-## Project structure
-
-```
-├── config.py                   # thresholds, model names, API keys
-├── example.py                  # runnable demo + PopQA eval helper
-├── requirements.txt
-├── .env.example
-└── src/crag/
-    ├── crag_pipeline.py        # main orchestrator
-    ├── retrieval_evaluator.py  # LLM-based relevance scorer
-    ├── knowledge_refinement.py # decompose-then-recompose
-    ├── web_search.py           # query rewriting + Tavily/SerpAPI/DDG
-    └── retriever.py            # FAISS + sentence-transformers
-```
-
----
-
-## Setup
+## Usage
 
 ```bash
 pip install -r requirements.txt
@@ -59,16 +42,12 @@ ANTHROPIC_API_KEY=...
 GENERATOR_MODEL=claude-sonnet-4-6
 ```
 
----
-
-## Usage
-
 **Run the demo:**
 ```bash
 python example.py
 ```
 
-This runs 4 queries against a small in-memory corpus. The first two should resolve from the corpus (`CORRECT`), the last two will trigger web search (`INCORRECT`).
+This runs 4 queries against a small in-memory corpus. The first two should resolve from the corpus (`CORRECT`), the last two will trigger web search (`INCORRECT` or 'AMBIGOUS').
 
 **Single query:**
 ```bash
@@ -115,7 +94,7 @@ Thresholds for the evaluator decision boundaries are in `config.py`. The paper r
 
 ---
 
-## Notes
+## Note
 
 The paper uses a fine-tuned T5-large model as the retrieval evaluator. This implementation uses an LLM-based evaluator instead, which works well enough for demos but won't match the paper's benchmark numbers.
 
