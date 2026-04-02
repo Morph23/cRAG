@@ -23,6 +23,20 @@ The knowledge refinement step (decompose-then-recompose) splits documents into 1
 
 ---
 
+## Example Screenshots
+
+**Query 1 — CORRECT** (answered from corpus)
+![Query 1](assets/Screenshot%202026-04-02%20122506.png)
+
+**Query 2 — CORRECT** (answered from corpus)
+![Query 2](assets/Screenshot%202026-04-02%20122519.png)
+
+**Query 3 — INCORRECT** (corpus has nothing recent → web search fires)
+![Query 3](assets/Screenshot%202026-04-02%20122528.png)
+
+**Query 4 — INCORRECT** (no local knowledge → web search fires)
+![Query 4](assets/Screenshot%202026-04-02%20122537.png)
+
 ## Usage
 
 ```bash
