@@ -1,0 +1,40 @@
+# env
+.env
+.env.local
+
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# venv
+venv/
+.venv/
+env/
+
+# checkpoints / model weights
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# huggingface cache
+.cache/
+
+# distribution
+dist/
+build/
+*.egg-info/
+
+# editor
+.vscode/
+.idea/
+*.swp
+
+# os
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
